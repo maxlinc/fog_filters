@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.api.rackspacecloud.com/v2.0/tokens
+    body:
+      encoding: UTF-8
+      string: ! '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"<rackspace-username>","apiKey":"<rackspace-api-token>"}}}'
+    headers:
+      User-Agent:
+      - fog/1.15.0
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - nginx/0.8.55
+      Date:
+      - Tue, 17 Sep 2013 18:40:34 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Accept-Encoding, X-Auth-Token
+      Via:
+      - 1.0 Repose (Repose/2.3.5)
+      Content-Length:
+      - '6447'
+      Front-End-Https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: ! '{"access":{"token":{"id":"96cee25cd31b4f08ad465b8a41df1cd1","expires":"2013-09-18T09:27:03.831-05:00","tenant":{"id":"_CDN-TENANT-NAME_","name":"_CDN-TENANT-NAME_"},"RAX-AUTH:authenticatedBy":["APIKEY"]},"serviceCatalog":[{"name":"cloudFiles","endpoints":[{"region":"DFW","tenantId":"_TENANT_ID_","publicURL":"https:\/\/storage101.dfw1.clouddrive.com\/v1\/_TENANT_ID_","internalURL":"https:\/\/snet-storage101.dfw1.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"ORD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/storage101.ord1.clouddrive.com\/v1\/_TENANT_ID_","internalURL":"https:\/\/snet-storage101.ord1.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"SYD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/storage101.syd2.clouddrive.com\/v1\/_TENANT_ID_","internalURL":"https:\/\/snet-storage101.syd2.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"IAD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/storage101.iad3.clouddrive.com\/v1\/_TENANT_ID_","internalURL":"https:\/\/snet-storage101.iad3.clouddrive.com\/v1\/_TENANT_ID_"}],"type":"object-store"},{"name":"cloudFilesCDN","endpoints":[{"region":"DFW","tenantId":"_TENANT_ID_","publicURL":"https:\/\/cdn1.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"SYD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/cdn4.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"ORD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/cdn2.clouddrive.com\/v1\/_TENANT_ID_"},{"region":"IAD","tenantId":"_TENANT_ID_","publicURL":"https:\/\/cdn5.clouddrive.com\/v1\/_TENANT_ID_"}],"type":"rax:object-cdn"},{"name":"cloudDatabases","endpoints":[{"region":"SYD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/syd.databases.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"ORD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/ord.databases.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"DFW","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dfw.databases.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"IAD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/iad.databases.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:database"},{"name":"cloudBlockStorage","endpoints":[{"region":"SYD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/syd.blockstorage.api.rackspacecloud.com\/v1\/_CDN-TENANT-NAME_"},{"region":"DFW","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dfw.blockstorage.api.rackspacecloud.com\/v1\/_CDN-TENANT-NAME_"},{"region":"ORD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/ord.blockstorage.api.rackspacecloud.com\/v1\/_CDN-TENANT-NAME_"},{"region":"IAD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/iad.blockstorage.api.rackspacecloud.com\/v1\/_CDN-TENANT-NAME_"}],"type":"volume"},{"name":"cloudServersOpenStack","endpoints":[{"region":"SYD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/syd.servers.api.rackspacecloud.com\/v2\/_CDN-TENANT-NAME_","versionInfo":"https:\/\/syd.servers.api.rackspacecloud.com\/v2","versionList":"https:\/\/syd.servers.api.rackspacecloud.com\/","versionId":"2"},{"region":"ORD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/ord.servers.api.rackspacecloud.com\/v2\/_CDN-TENANT-NAME_","versionInfo":"https:\/\/ord.servers.api.rackspacecloud.com\/v2","versionList":"https:\/\/ord.servers.api.rackspacecloud.com\/","versionId":"2"},{"region":"DFW","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dfw.servers.api.rackspacecloud.com\/v2\/_CDN-TENANT-NAME_","versionInfo":"https:\/\/dfw.servers.api.rackspacecloud.com\/v2","versionList":"https:\/\/dfw.servers.api.rackspacecloud.com\/","versionId":"2"},{"region":"IAD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/iad.servers.api.rackspacecloud.com\/v2\/_CDN-TENANT-NAME_","versionInfo":"https:\/\/iad.servers.api.rackspacecloud.com\/v2","versionList":"https:\/\/iad.servers.api.rackspacecloud.com\/","versionId":"2"}],"type":"compute"},{"name":"cloudLoadBalancers","endpoints":[{"region":"SYD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/syd.loadbalancers.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"ORD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/ord.loadbalancers.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"DFW","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dfw.loadbalancers.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"IAD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/iad.loadbalancers.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:load-balancer"},{"name":"autoscale","endpoints":[{"region":"ORD","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/ord.autoscale.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"},{"region":"DFW","tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dfw.autoscale.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:autoscale"},{"name":"cloudDNS","endpoints":[{"tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/dns.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:dns"},{"name":"cloudServers","endpoints":[{"tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/servers.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_","versionInfo":"https:\/\/servers.api.rackspacecloud.com\/v1.0","versionList":"https:\/\/servers.api.rackspacecloud.com\/","versionId":"1.0"}],"type":"compute"},{"name":"cloudBackup","endpoints":[{"tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/backup.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:backup"},{"name":"cloudMonitoring","endpoints":[{"tenantId":"_CDN-TENANT-NAME_","publicURL":"https:\/\/monitoring.api.rackspacecloud.com\/v1.0\/_CDN-TENANT-NAME_"}],"type":"rax:monitor"}],"user":{"id":"358651","roles":[{"id":"10000150","description":"Checkmate
+        Access role","name":"checkmate"},{"tenantId":"_TENANT_ID_","id":"5","description":"A
+        Role that allows a user access to keystone Service methods","name":"object-store:default"},{"tenantId":"_CDN-TENANT-NAME_","id":"6","description":"A
+        Role that allows a user access to keystone Service methods","name":"compute:default"},{"id":"3","description":"User
+        Admin Role.","name":"identity:user-admin"}],"name":"<rackspace-username>","RAX-AUTH:defaultRegion":"ORD"}}}'
+    http_version: 
+  recorded_at: Tue, 17 Sep 2013 18:40:36 GMT
+- request:
+    method: get
+    uri: https://ord.servers.api.rackspacecloud.com/v2/_CDN-TENANT-NAME_/servers/my_server
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fog/1.15.0
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - 96cee25cd31b4f08ad465b8a41df1cd1
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Tue, 17 Sep 2013 18:40:36 GMT
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Compute-Request-Id:
+      - req-75733f69-41cc-45cb-9c4a-5ef458b0e0cd
+      Server:
+      - Jetty(8.0.y.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: ! '{"itemNotFound": {"message": "Instance could not be found", "code":
+        404}}'
+    http_version: 
+  recorded_at: Tue, 17 Sep 2013 18:40:38 GMT
+recorded_with: VCR 2.5.0
